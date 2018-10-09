@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+bubble_sort	bubble_sort.c	/^void bubble_sort(void)$/;"	f
+display	display.c	/^void display(int *arr,int size)$/;"	f
+divide_array	merge_sort.c	/^void divide_array(int *arr,int low, int high)$/;"	f
+input_array	input_array.c	/^int *input_array(void)$/;"	f
+insertion_sort	insetion_sort.c	/^void insertion_sort(void)$/;"	f
+intval_input	intval_input.c	/^int  intval_input(void)$/;"	f
+main	main.c	/^int main(void)$/;"	f
+merge_sort	merge_sort.c	/^void merge_sort(void)$/;"	f
+merging	merge_sort.c	/^void merging(int *arr,int low, int mid, int high)$/;"	f
+partition	quick_sort.c	/^int partition (int *arr, int min, int max)$/;"	f
+quick	quick_sort.c	/^void quick(int *arr,int min, int max)$/;"	f
+quick_sort	quick_sort.c	/^void quick_sort(void)$/;"	f
+selection_sort	selection_sort.c	/^void selection_sort(void)$/;"	f
+swap_arr	swap.c	/^void swap_arr(int *a, int *b)$/;"	f

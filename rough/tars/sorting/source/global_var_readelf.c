@@ -1,0 +1,3 @@
+int data ;
+
+int main(){}

@@ -1,0 +1,18 @@
+#include	"head.h"
+
+node* r_end(node* head )
+{
+		node* temp=head;
+		if(head == NULL){
+				printf("LIST IS EMPTY\n");
+				return head;
+		}
+		//temp=temp->ptr;
+		while(temp!= head){
+				temp=temp->ptr;
+		}
+		printf("%d\n",temp->data);
+}
+
+
+

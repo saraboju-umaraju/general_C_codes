@@ -1,0 +1,9 @@
+#include<stdio.h>
+#define WWW -1
+enum {cat,rat};
+void main(){
+        int Dhoni[]={2,'b',0x3,01001,'\x1d','\111',rat,WWW};
+        int i;
+        for(i=0;i<8;i++)
+                printf(" %d",Dhoni[i]);
+}

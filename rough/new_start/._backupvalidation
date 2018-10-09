@@ -1,0 +1,210 @@
+#include    <uma.h>
+#include    <signal.h>
+
+void _hand ( int as ) {
+
+		printf (Y"OKAY SEE YOU BYE....!\n"Z);
+
+		exit ( EXIT_FAILURE ) ;
+
+}
+
+#define _SIGN 2147483647
+
+#define SIZE 120
+
+#define set 1
+
+#define reset 0
+
+#define CHAR ( ( *(buf + var)   >= '0'  && *(buf + var)   <= '9' ) || ( *( buf + var ) =='\0' ) )
+
+#define SIGN ( *(buf + var)   == '+' || *(buf + var)   == '-' )
+
+#define SPACE ( *(buf + var)   == ' ' || *(buf + var)   == '\t' || *(buf + var)   == '\n' )
+
+#define DOT ( *(buf + var)  == '.' )
+
+//void printf( char* );
+
+long long int _atoi ( char *) ;
+
+int _val (void) {
+
+		signal( SIGINT , _hand ) ;
+
+		int variable = 1;
+
+//		printf("ASSUMNNG\n");
+
+		while ( variable ) {
+
+				char buf[SIZE];
+
+				int var = 0;
+
+				int char_flag = 0;
+
+				int space_flag = 0;
+
+				int sign_flag = 0;
+
+				int dot_count = 0;
+
+				int dot_flag = 0;
+
+				int _signflag = 0;
+
+				long long int final_value = 0;
+
+				int ret ;
+
+
+
+				var = 0 ;
+
+				printf(B"ENTER INTEGER\n"Z);
+
+				__fpurge(stdin);
+
+				if(!( fgets(buf,SIZE,stdin) )) {
+
+						printf(R"INTERRUPT SIGNAL\n"Z);
+
+						continue;
+				}
+
+				while ( *(buf + var) =='\t' || *(buf + var) ==' ' ) {
+
+						var++;
+				}
+
+				if ( *( buf+var ) == '\n' ) {
+
+						printf(R"NEW_LINE_ALONE_HAS_NO_USE\n"Z);
+
+						continue;
+
+				}
+				var = 0;
+
+				if( buf[ strlen ( buf ) - 1 ] == '\n' ) {
+
+						buf[ strlen ( buf ) - 1 ] = '\0' ;
+				}
+
+
+
+				variable = 0 ;
+
+				while ( *(buf + var) ) {
+
+						if (  CHAR  ) {
+
+								if ( space_flag == reset) {
+
+									/*	if ( space_flag == set  ) {
+
+												printf ( R"CANT PUT SPACES BETWEEN INTEGERS\n"Z );
+
+												break;
+										}*/
+
+										char_flag = set ;
+
+									//	if ( *( buf + var ) == '\0' )
+
+									//			printf("valid integer\n");;
+
+										var++ ;
+
+										continue ;
+
+								}
+								else {
+										printf(R"MIS_PLACED_WHITE_SPACES\n"Z);
+
+										break;
+								}
+						}
+
+						else if ( SIGN ) {
+
+								if ( char_flag == set || dot_flag  ) {
+
+										printf( R"MIS_PLACED_SIGN\n"Z);
+
+										break;
+								}
+
+								sign_flag ++ ;
+
+								_signflag = set ;
+
+								if ( sign_flag > 1 ) {
+
+										printf( R"INVALID_USAGE_OF_SIGN\n"Z );
+
+										break;
+								}
+						}
+
+						else if ( DOT ) {
+
+								dot_count++ ;
+
+								if ( dot_count > 1 || space_flag ) {
+
+										printf(R"MIS_USE_OF_DECIMAL_POINT\n"Z);
+
+										break;
+								}
+
+								dot_flag = set ;
+						}
+
+						else if ( SPACE ) {
+
+								if (   dot_count && !char_flag) {
+
+										printf ( R"DECIMAL FOLLOWED BY SPACES\n"Z );
+
+										break;
+								}
+
+								if ( char_flag == set ) {
+
+										space_flag = set ;
+								}
+						}
+
+						else  {
+
+								printf( R"ALIEN_CHARACTERS_IN_INTEGER_SET\n"Z );
+
+								break;
+						}
+
+						var++;
+
+				} // while loop ends here 
+
+				variable = 1 ;
+
+				if (* (buf + var ) == '\0' ) {
+
+						final_value =  _atoi(buf);
+
+						if ( final_value > _SIGN || ( final_value < - _SIGN - 1) ) {
+
+								printf(R"OVERFLOW CANT FIT THE INTEGER IN\n"Z);
+
+								continue ;
+						}
+
+						else 
+								return final_value ;
+
+				}
+		}
+}

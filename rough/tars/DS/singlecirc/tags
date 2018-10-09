@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+NODE	head.h	/^struct NODE$/;"	s
+data	head.h	/^		int data;$/;"	m	struct:NODE
+disp	disp.c	/^node* disp(node* head)$/;"	f
+i_beg	i_beg.c	/^node* i_beg(node* head, int add)$/;"	f
+i_end	i_end.c	/^node* i_end(node* head , int add)$/;"	f
+main	main.c	/^int main()$/;"	f
+node	head.h	/^typedef struct NODE node;$/;"	t	typeref:struct:NODE
+ptr	head.h	/^		struct NODE* ptr;$/;"	m	struct:NODE	typeref:struct:NODE::NODE
+r_end	r_end.c	/^node* r_end(node* head )$/;"	f
+r_head	r_head.c	/^node* r_head(node* head )$/;"	f

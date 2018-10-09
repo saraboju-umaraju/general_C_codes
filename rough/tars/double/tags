@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+FGETS	d_l.c	3;"	d	file:
+OBJ	Makefile	/^OBJ =  d_l.o d_disp.o d_rem_val.o id_value.o dd_end.o d_in_poss.o d_r_disp.o id_end.o dd_head.o d_in_val.o d_rem_pos.c id_head.o$/;"	m
+SIZE	d_l.c	4;"	d	file:
+VPATH	Makefile	/^VPATH = ..\/header\/ $/;"	m
+d_disp	d_disp.c	/^_node* d_disp(_node * head ){$/;"	f
+d_i_pos	d_in_poss.c	/^_node* d_i_pos(_node* head, int pos,int add){$/;"	f
+d_in_val	d_in_val.c	/^_node* d_in_val(_node* head, int val,int add){$/;"	f
+d_r_disp	d_r_disp.c	/^_node* d_r_disp( _node* head ){$/;"	f
+d_rem_pos	d_rem_pos.c	/^_node* d_rem_pos(_node *head, int pos) {$/;"	f
+d_rem_val	d_rem_val.c	/^_node* d_rem_val(_node* head , int val ){$/;"	f
+dd_end	dd_end.c	/^_node* dd_end(_node* head ){$/;"	f
+dd_head	dd_head.c	/^_node* dd_head(_node *head){$/;"	f
+head	d_l.c	/^_node *head=NULL;$/;"	v
+i_head	id_head.c	/^_node *i_head(_node * head,int add){$/;"	f
+id_end	id_end.c	/^_node* id_end( _node *head,int add ){$/;"	f
+id_val	id_value.c	/^_node *id_val(_node * head,int add){$/;"	f
+main	d_l.c	/^int main()$/;"	f

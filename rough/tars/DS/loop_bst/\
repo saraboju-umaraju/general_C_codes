@@ -1,0 +1,20 @@
+#include    <uma.h>
+int main (void) {
+		FILE  *fp = fopen("kill1.txt", "r+");
+		int ch;
+		while( ! feof(fp) ) 
+		{
+				ch = fgetc ( fp ) ;
+
+			//	if(isalpha(ch))
+				if(ch != 'z') {
+				ch^=( 1<<5 ) ;
+
+				fseek (fp , -1 , SEEK_CUR );
+				}
+				fputc ( ch , fp );
+
+//				fseek (fp , 1 , SEEK_CUR  );
+
+		}
+}
